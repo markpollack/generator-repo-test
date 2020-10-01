@@ -7,8 +7,8 @@ kind: Service
 metadata:
   creationTimestamp: null
   labels:
-    app: {{artifactid}}
-  name: {{artifactid}}
+    app: {{artifactId}}
+  name: {{artifactId}}
 spec:
   ports:
   - name: 8080-8080
@@ -16,7 +16,7 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    app: {{artifactid}}
+    app: {{artifactId}}
   type: ClusterIP
 status:
   loadBalancer: {}

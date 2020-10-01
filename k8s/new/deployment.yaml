@@ -7,22 +7,22 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: {{artifactid}}
-  name: {{artifactid}}
+    app: {{artifactId}}
+  name: {{artifactId}}
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: {{artifactid}}
+      app: {{artifactId}}
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: {{artifactid}}
+        app: {{artifactId}}
     spec:
       containers:
-      - image: {{artifactid}}:{{artifactVersion}}
-        name: {{artifactid}}
+      - image: {{artifactId}}:{{artifactVersion}}
+        name: {{artifactId}}
         resources: {}
 status: {}
