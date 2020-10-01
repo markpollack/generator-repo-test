@@ -1,0 +1,28 @@
+---
+actions:
+  to: kubernetes/app/deployment.yaml
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: {{artifactid}}
+  name: {{artifactid}}
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{artifactid}}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: {{artifactid}}
+    spec:
+      containers:
+      - image: {{artifactid}}:{{artifactVersion}}
+        name: {{artifactid}}
+        resources: {}
+status: {}
